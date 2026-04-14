@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary-50: 239 246 255;
+        --color-primary-100: 219 234 254;
+        --color-primary-200: 191 219 254;
+        --color-primary-300: 147 197 253;
+        --color-primary-400: 96 165 250;
+        --color-primary-500: 59 130 246;
+        --color-primary-600: 37 99 235;
+        --color-primary-700: 29 78 216;
+        --color-primary-800: 30 64 175;
+        --color-primary-900: 30 58 138;
+        --color-primary-950: 23 37 84;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex justify-center rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 active:bg-primary-700;
+    }
+
+    .btn-primary-soft {
+        @apply inline-flex justify-center rounded-lg bg-primary-100 px-4 py-2.5 text-sm font-semibold text-primary-800 shadow-sm transition-colors hover:bg-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500;
+    }
+
+    .link-primary {
+        @apply font-medium text-primary-600 underline-offset-2 transition-colors hover:text-primary-500 hover:underline;
+    }
+
+    .input-primary {
+        @apply block w-full rounded-lg border-slate-300 shadow-sm transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/40 dark:border-slate-600 dark:bg-slate-800 dark:text-white;
+    }
+}
